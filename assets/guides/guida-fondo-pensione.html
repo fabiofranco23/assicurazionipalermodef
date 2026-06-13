@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fondo Pensione – Riduci le Tasse che Paghi – RF Assicurazioni Palermo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blu:       #1A3A6B;
+  --blu-mid:   #22508A;
+  --blu-light: #2E6FBF;
+  --arancio:   #E8711A;
+  --arancio-l: #F4924A;
+  --arancio-xl:#FDEBD8;
+  --verde:     #1A7A4A;
+  --cream:     #F9F6F1;
+  --white:     #FFFFFF;
+  --text:      #1C2B3A;
+  --text-soft: #4A5E72;
+  --border:    #D9E4F0;
+}
+
+html { font-size: 16px; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: #EAEEF3;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 20px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  page-break-after: always;
+  break-after: page;
+  box-shadow: 0 8px 40px rgba(26,58,107,.18);
+}
+
+/* ══ PAGE 1 – COPERTINA ══ */
+.cover {
+  background: #0D2240;
+  color: var(--white);
+  min-height: 297mm;
+  display: flex;
+  flex-direction: column;
+}
+.cover .deco1 { position:absolute; top:-55px; right:-55px; width:240px; height:240px; border:48px solid rgba(232,113,26,.13); border-radius:50%; }
+.cover .deco2 { position:absolute; bottom:50px; left:-65px; width:190px; height:190px; border:32px solid rgba(46,111,191,.18); border-radius:50%; }
+.cover .deco3 { position:absolute; top:0; right:52mm; width:2px; height:100%; background:linear-gradient(to bottom,transparent,rgba(232,113,26,.25),transparent); }
+
+.cover-inner { position:relative; z-index:2; display:flex; flex-direction:column; height:100%; padding:12mm 13mm 10mm; }
+
+/* logo */
+.logo-bar { display:flex; align-items:center; gap:10px; margin-bottom:7mm; }
+.logo-img-wrap { display:flex; align-items:center; }
+.logo-img-wrap img { height:44px; width:auto; }
+.logo-fallback {
+  background:var(--arancio); border-radius:10px;
+  width:44px; height:44px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Playfair Display',serif; font-size:20px; font-weight:900; color:var(--white);
+}
+.logo-text-wrap { display:flex; flex-direction:column; line-height:1.15; }
+.logo-text-wrap .l1 { font-size:15px; font-weight:700; letter-spacing:1.5px; color:var(--white); }
+.logo-text-wrap .l2 { font-size:8.5px; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.5); }
+
+/* hero callout */
+.cover-callout {
+  background: var(--arancio);
+  border-radius:14px;
+  padding:7mm 8mm;
+  margin-bottom:5mm;
+}
+.cover-callout .c-pre { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.75); margin-bottom:2mm; }
+.cover-callout h1 { font-family:'Playfair Display',serif; font-size:25px; font-weight:900; color:var(--white); line-height:1.22; }
+
+.cover-lead { font-size:12.5px; color:rgba(255,255,255,.8); line-height:1.65; margin-bottom:6mm; padding-left:13px; border-left:3px solid rgba(232,113,26,.5); }
+
+/* stat row */
+.cover-stats { display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm; margin-bottom:6mm; }
+.c-stat { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1); border-radius:10px; padding:4mm; text-align:center; }
+.c-stat .sn { font-family:'Playfair Display',serif; font-size:20px; font-weight:900; color:var(--arancio-l); line-height:1.1; margin-bottom:1.5mm; }
+.c-stat .sl { font-size:8.5px; color:rgba(255,255,255,.6); line-height:1.4; }
+
+.cover-tagline { font-family:'Playfair Display',serif; font-size:13.5px; font-style:italic; color:rgba(255,255,255,.65); margin-bottom:auto; }
+
+/* author */
+.cover-author {
+  margin-top:5mm;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  padding:4mm 5mm;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.cover-author .an { font-size:12px; font-weight:700; color:var(--white); }
+.cover-author .ar { font-size:9px; color:rgba(255,255,255,.55); margin-top:1px; }
+.cover-author .badge { background:var(--arancio); color:var(--white); font-size:8px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:3px 11px; border-radius:20px; }
+
+/* ══ INNER ══ */
+.inner { padding:10mm 13mm 9mm; display:flex; flex-direction:column; gap:5mm; flex:1; }
+
+.page-bar { display:flex; align-items:center; justify-content:space-between; padding-bottom:4mm; border-bottom:2px solid var(--blu); }
+.pb-brand { display:flex; align-items:center; gap:8px; }
+.pb-brand .dot { width:8px; height:8px; background:var(--arancio); border-radius:50%; }
+.pb-brand span { font-size:9px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--blu); }
+.pn { font-size:9px; color:var(--text-soft); }
+
+.eyebrow { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--arancio); margin-bottom:1.5mm; }
+.sec-title { font-family:'Playfair Display',serif; font-size:20px; font-weight:700; color:var(--blu); line-height:1.25; margin-bottom:1.5mm; }
+.divider { width:36px; height:3px; background:var(--arancio); border-radius:2px; margin-bottom:3mm; }
+.lead { font-size:11.5px; color:var(--text-soft); line-height:1.65; }
+
+/* big answer box */
+.answer-box {
+  background:linear-gradient(135deg,var(--arancio) 0%,#C9560E 100%);
+  border-radius:14px; padding:6mm 7mm; color:var(--white); position:relative; overflow:hidden;
+}
+.answer-box::after { content:''; position:absolute; right:-18px; top:-18px; width:95px; height:95px; border:18px solid rgba(255,255,255,.1); border-radius:50%; }
+.answer-box .ab-pre { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.75); margin-bottom:2mm; }
+.answer-box .ab-row { display:flex; align-items:baseline; gap:5px; }
+.answer-box .ab-num { font-family:'Playfair Display',serif; font-size:50px; font-weight:900; color:var(--white); line-height:1; }
+.answer-box .ab-unit { font-size:20px; font-weight:700; color:rgba(255,255,255,.9); }
+.answer-box .ab-desc { font-size:11.5px; color:rgba(255,255,255,.85); margin-top:2mm; line-height:1.55; }
+.answer-box .ab-cta { font-size:10.5px; color:rgba(255,255,255,.7); font-style:italic; margin-top:2mm; }
+
+/* irpef table */
+.irpef-table { width:100%; border-collapse:collapse; border-radius:10px; overflow:hidden; font-size:10.5px; }
+.irpef-table thead tr { background:var(--blu); color:var(--white); }
+.irpef-table thead th { padding:3mm 4mm; text-align:left; font-weight:600; font-size:9.5px; letter-spacing:.3px; }
+.irpef-table tbody tr:nth-child(odd) { background:var(--cream); }
+.irpef-table tbody tr:nth-child(even) { background:var(--white); }
+.irpef-table tbody tr.hl { background:rgba(232,113,26,.08); }
+.irpef-table tbody td { padding:2.5mm 4mm; color:var(--text); vertical-align:middle; }
+.irpef-table .star { display:inline-block; background:var(--arancio); color:var(--white); font-size:8px; font-weight:700; padding:1.5px 6px; border-radius:8px; margin-left:4px; }
+
+/* callout */
+.callout { background:rgba(26,58,107,.06); border-left:3px solid var(--blu); border-radius:0 8px 8px 0; padding:3mm 4mm; font-size:10.5px; color:var(--text); line-height:1.65; }
+.callout strong { color:var(--blu); }
+.callout-orange { background:var(--arancio-xl); border-left:3px solid var(--arancio); border-radius:0 8px 8px 0; padding:3mm 4mm; font-size:10.5px; color:var(--text); line-height:1.65; }
+.callout-orange strong { color:var(--arancio); }
+.callout-dark { background:linear-gradient(135deg,#0D2240 0%,var(--blu) 100%); border-radius:12px; padding:5mm 6mm; color:var(--white); }
+.callout-dark p { font-size:11px; color:rgba(255,255,255,.85); line-height:1.65; }
+.callout-dark strong { color:var(--arancio-l); }
+
+/* triple moments */
+.moment-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:3.5mm; }
+.mc { border-radius:10px; padding:4.5mm 4mm; text-align:center; border:1.5px solid var(--border); }
+.mc.m1 { background:rgba(26,58,107,.05); border-color:var(--blu-light); }
+.mc.m2 { background:rgba(232,113,26,.05); border-color:var(--arancio); }
+.mc.m3 { background:rgba(26,122,74,.05); border-color:var(--verde); }
+.mc .mc-ico { font-size:22px; margin-bottom:2mm; }
+.mc h5 { font-size:10px; font-weight:700; color:var(--blu); margin-bottom:1.5mm; }
+.mc.m2 h5 { color:var(--arancio); }
+.mc.m3 h5 { color:var(--verde); }
+.mc p { font-size:9.5px; color:var(--text-soft); line-height:1.55; }
+
+/* aliquota progression */
+.aliq-bar { display:flex; flex-direction:column; gap:2mm; }
+.aliq-row { display:flex; align-items:center; gap:3mm; }
+.aliq-year { font-size:9px; font-weight:700; color:var(--text-soft); width:44px; flex-shrink:0; text-align:right; }
+.aliq-track { flex:1; background:var(--border); border-radius:4px; height:12px; overflow:hidden; position:relative; }
+.aliq-fill { height:100%; border-radius:4px; }
+.aliq-pct { font-size:9.5px; font-weight:700; width:36px; flex-shrink:0; }
+
+/* anticipo cards */
+.anticipo-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:3.5mm; }
+.ac { border-radius:10px; padding:4mm; border:1.5px solid var(--border); background:var(--cream); }
+.ac .ac-ico { font-size:20px; margin-bottom:2mm; }
+.ac h5 { font-size:10.5px; font-weight:700; color:var(--blu); margin-bottom:1.5mm; }
+.ac .ac-pct { display:inline-block; background:var(--arancio); color:var(--white); font-size:9px; font-weight:700; padding:2px 9px; border-radius:10px; margin-bottom:2mm; }
+.ac p { font-size:9.5px; color:var(--text-soft); line-height:1.55; }
+.ac .ac-nota { font-size:8.5px; color:var(--text-soft); font-style:italic; margin-top:2mm; }
+
+/* busta vs 730 */
+.rimborso-grid { display:grid; grid-template-columns:1fr 1fr; gap:3.5mm; }
+.rg-card { border-radius:10px; padding:4.5mm; border:1.5px solid var(--border); background:var(--cream); text-align:center; }
+.rg-card .rg-ico { font-size:22px; margin-bottom:2mm; }
+.rg-card h5 { font-size:11px; font-weight:700; color:var(--blu); margin-bottom:1.5mm; }
+.rg-card p { font-size:10px; color:var(--text-soft); line-height:1.55; }
+
+/* CTA page */
+.cta-hero { background:linear-gradient(135deg,var(--blu) 0%,#0D2240 100%); border-radius:14px; padding:7mm 8mm; color:var(--white); text-align:center; position:relative; overflow:hidden; }
+.cta-hero::before { content:''; position:absolute; right:-30px; top:-30px; width:130px; height:130px; border:22px solid rgba(232,113,26,.2); border-radius:50%; }
+.cta-hero .ct-tag { display:inline-block; background:var(--arancio); color:var(--white); font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:4px 14px; border-radius:20px; margin-bottom:3mm; }
+.cta-hero h2 { font-family:'Playfair Display',serif; font-size:19px; font-weight:900; color:var(--white); line-height:1.3; margin-bottom:3mm; }
+.cta-hero p { font-size:11px; color:rgba(255,255,255,.8); line-height:1.65; margin-bottom:4mm; }
+.cta-btn { display:inline-block; background:var(--arancio); color:var(--white); font-size:11.5px; font-weight:700; padding:9px 24px; border-radius:30px; text-decoration:none; }
+.cta-btn-outline { display:inline-block; background:transparent; color:var(--white); font-size:10.5px; font-weight:600; padding:8px 20px; border-radius:30px; border:2px solid rgba(255,255,255,.4); text-decoration:none; margin-left:6px; }
+
+.trust-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:3mm; }
+.ti { background:var(--cream); border:1.5px solid var(--border); border-radius:10px; padding:4mm; text-align:center; }
+.ti .ti-ico { font-size:20px; margin-bottom:2mm; }
+.ti h5 { font-size:10px; font-weight:700; color:var(--blu); margin-bottom:1mm; }
+.ti p { font-size:9.5px; color:var(--text-soft); line-height:1.5; }
+
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:3mm; }
+.ci { display:flex; align-items:center; gap:3mm; background:var(--cream); border:1.5px solid var(--border); border-radius:10px; padding:3.5mm 4mm; text-decoration:none; }
+.ci .ci-ico { width:30px; height:30px; border-radius:8px; background:var(--blu); display:flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; }
+.ci .ci-ico.green { background:#25D366; }
+.ci .ci-ico.orange { background:var(--arancio); }
+.ci .ci-ico.grey { background:#555; }
+.ci-label { font-size:8px; color:var(--text-soft); letter-spacing:1px; text-transform:uppercase; }
+.ci-val { font-size:10.5px; font-weight:600; color:var(--blu); }
+
+/* legal footer */
+.legal-box {
+  background:rgba(26,58,107,.04);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:3mm 4mm;
+  font-size:8.5px;
+  color:var(--text-soft);
+  line-height:1.6;
+}
+.legal-box strong { color:var(--blu); }
+
+.page-footer { margin-top:auto; padding-top:3.5mm; border-top:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; font-size:8px; color:var(--text-soft); }
+.pf-brand { font-weight:700; color:var(--blu); }
+.pf-dot { width:4px; height:4px; background:var(--arancio); border-radius:50%; display:inline-block; margin:0 4px; vertical-align:middle; }
+
+@media print { body { background:none; } .page { margin:0; box-shadow:none; } }
+@media screen and (max-width:680px) {
+  .page { width:100%; min-height:auto; margin:0 0 14px; }
+  .inner { padding:6mm 5mm; }
+  .cover-inner { padding:7mm; }
+  .cover-stats { grid-template-columns:1fr 1fr; }
+  .moment-grid,.anticipo-grid,.trust-strip { grid-template-columns:1fr; }
+  .contact-grid,.rimborso-grid { grid-template-columns:1fr; }
+  .answer-box .ab-num { font-size:38px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════
+     PAGE 1 — COPERTINA
+════════════════════════════════ -->
+<div class="page cover">
+  <div class="deco1"></div>
+  <div class="deco2"></div>
+  <div class="deco3"></div>
+  <div class="cover-inner">
+
+    <div class="logo-bar">
+      <div class="logo-img-wrap">
+        <!-- Logo ufficiale dal sito -->
+        <img src="https://assicurazionipalermo.net/wp-content/uploads/2020/11/logo-1-rettangolo.png"
+             alt="RF Assicurazioni"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+             style="max-height:44px; width:auto;">
+        <div class="logo-fallback" style="display:none;">RF</div>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="l1">RF ASSICURAZIONI</span>
+        <span class="l2">Agenzia Generale Unipol · UniSalute · Palermo</span>
+      </div>
+    </div>
+
+    <div class="cover-callout">
+      <p class="c-pre">Fondo Pensione: scopri come funziona davvero</p>
+      <h1>Versi 5.300€ al fondo pensione.<br>Lo Stato te ne restituisce<br>fino a 2.279€ — ogni anno.</h1>
+    </div>
+
+    <p class="cover-lead">
+      Esiste uno strumento legale, riconosciuto dallo Stato, che ti permette di costruire la tua pensione integrativa <strong>e al tempo stesso ridurre le tasse che paghi ogni anno</strong>. Si chiama fondo pensione — e probabilmente stai aspettando troppo.
+    </p>
+
+    <div class="cover-stats">
+      <div class="c-stat">
+        <div class="sn">5.300€</div>
+        <div class="sl">deducibili dal reddito ogni anno</div>
+      </div>
+      <div class="c-stat">
+        <div class="sn">fino a<br>2.279€</div>
+        <div class="sl">di risparmio fiscale annuo stimato</div>
+      </div>
+      <div class="c-stat">
+        <div class="sn">9%</div>
+        <div class="sl">tassazione minima finale prevista per legge</div>
+      </div>
+    </div>
+
+    <p class="cover-tagline">Guida pratica a cura di Fabio Franco – Agente Generale.</p>
+
+    <div class="cover-author">
+      <div>
+        <div class="an">Fabio Franco</div>
+        <div class="ar">Agente Generale · RF Assicurazioni di Franco Fabio &amp; C. Sas · Palermo</div>
+      </div>
+      <span class="badge">Guida gratuita 2026</span>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════
+     PAGE 2 — IL MECCANISMO FISCALE
+════════════════════════════════ -->
+<div class="page">
+  <div class="inner">
+
+    <div class="page-bar">
+      <div class="pb-brand"><div class="dot"></div><span>RF Assicurazioni · Fabio Franco – Agente Generale</span></div>
+      <span class="pn">02 / 04</span>
+    </div>
+
+    <div>
+      <p class="eyebrow">Come funziona il vantaggio fiscale</p>
+      <h2 class="sec-title">Un modo concreto e legale<br>per pagare meno tasse — già quest'anno.</h2>
+      <div class="divider"></div>
+      <p class="lead">I contributi versati al fondo pensione <strong>riducono il tuo reddito imponibile</strong>. Meno reddito tassato = meno IRPEF da versare. La differenza ti viene restituita dallo Stato — in busta paga o con il 730.</p>
+    </div>
+
+    <!-- BIG ANSWER -->
+    <div class="answer-box">
+      <p class="ab-pre">Esempio concreto · Reddito 50.000€ · Aliquota 43%</p>
+      <div class="ab-row">
+        <span class="ab-num">2.279</span><span class="ab-unit">€</span>
+      </div>
+      <p class="ab-desc">di risparmio fiscale IRPEF all'anno — semplicemente versando 5.300€ al fondo pensione invece di tenerli fermi.</p>
+      <p class="ab-cta">Esiste qualcosa di più vantaggioso? — No. Nessun altro investimento garantisce un rendimento fiscale immediato di questa portata.</p>
+    </div>
+
+    <!-- IRPEF TABLE -->
+    <div>
+      <p style="font-size:10.5px;font-weight:700;color:var(--blu);margin-bottom:2mm;">Quanto risparmi in base al tuo reddito? (versamento 5.300€/anno)</p>
+      <table class="irpef-table">
+        <thead>
+          <tr>
+            <th>Reddito annuo lordo</th>
+            <th>Aliquota IRPEF</th>
+            <th>Risparmio fiscale stimato</th>
+            <th>Come riceverlo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>fino a 28.000€</td>
+            <td>23%</td>
+            <td><strong>~1.219€</strong></td>
+            <td>Busta paga o 730</td>
+          </tr>
+          <tr class="hl">
+            <td>28.001€ – 50.000€</td>
+            <td>35%</td>
+            <td><strong style="color:var(--arancio);">~1.855€ <span class="star">fascia più comune</span></strong></td>
+            <td>Busta paga o 730</td>
+          </tr>
+          <tr>
+            <td>oltre 50.000€</td>
+            <td>43%</td>
+            <td><strong>~2.279€</strong></td>
+            <td>Busta paga o 730</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:8px;color:var(--text-soft);margin-top:1.5mm;font-style:italic;">Stime indicative. Il beneficio effettivo dipende dalla situazione fiscale individuale. Per una valutazione personale contattaci.</p>
+    </div>
+
+    <!-- HOW YOU RECEIVE IT -->
+    <div class="rimborso-grid">
+      <div class="rg-card">
+        <div class="rg-ico">💼</div>
+        <h5>Lavoratore dipendente</h5>
+        <p>Il risparmio fiscale si traduce in <strong>meno IRPEF trattenuta in busta paga</strong>, già dal mese successivo alla dichiarazione. Lo vedi direttamente nello stipendio.</p>
+      </div>
+      <div class="rg-card">
+        <div class="rg-ico">📋</div>
+        <h5>Libero professionista / P.IVA</h5>
+        <p>Il risparmio si recupera con la <strong>dichiarazione dei redditi (Modello Redditi)</strong>. La deduzione abbatte il reddito imponibile e riduce l'IRPEF dovuta.</p>
+      </div>
+    </div>
+
+    <div class="callout-orange">
+      <strong>Dal 2026:</strong> il limite massimo deducibile è stato innalzato a <strong>5.300€ annui</strong> (era 5.164,57€). Una soglia più alta significa un risparmio fiscale ancora maggiore per chi aderisce ora.
+    </div>
+
+    <div class="page-footer">
+      <span class="pf-brand">RF Assicurazioni · Palermo</span>
+      <span><span class="pf-dot"></span>A cura di Fabio Franco – Agente Generale</span>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════
+     PAGE 3 — TRIPLO VANTAGGIO + ALIQUOTE + ANTICIPI
+════════════════════════════════ -->
+<div class="page">
+  <div class="inner">
+
+    <div class="page-bar">
+      <div class="pb-brand"><div class="dot"></div><span>RF Assicurazioni · Fabio Franco – Agente Generale</span></div>
+      <span class="pn">03 / 04</span>
+    </div>
+
+    <div>
+      <p class="eyebrow">Non solo oggi — tre vantaggi nel tempo</p>
+      <h2 class="sec-title">Il fondo pensione ti conviene<br>in tre momenti distinti.</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="moment-grid">
+      <div class="mc m1">
+        <div class="mc-ico">📥</div>
+        <h5>1. Quando versi</h5>
+        <p>Ogni anno riduci il reddito imponibile. Il risparmio IRPEF arriva subito — in busta paga o con la dichiarazione.</p>
+      </div>
+      <div class="mc m2">
+        <div class="mc-ico">📈</div>
+        <h5>2. Mentre cresce</h5>
+        <p>I rendimenti sono tassati all'<strong>11%</strong> anziché al <strong>26%</strong> degli investimenti ordinari. Cresci più velocemente.</p>
+      </div>
+      <div class="mc m3">
+        <div class="mc-ico">🏆</div>
+        <h5>3. Quando incassi</h5>
+        <p>La prestazione finale è tassata in modo agevolato — dal 15% fino al <strong>9% minimo</strong> — contro aliquote IRPEF fino al 43%.</p>
+      </div>
+    </div>
+
+    <!-- ALIQUOTA PROGRESSION -->
+    <div>
+      <p style="font-size:10.5px;font-weight:700;color:var(--blu);margin-bottom:3mm;">Come scende l'aliquota finale nel tempo (parte dal 15°anno):</p>
+      <div class="aliq-bar">
+        <div class="aliq-row">
+          <span class="aliq-year">Anno 15</span>
+          <div class="aliq-track"><div class="aliq-fill" style="width:80%;background:var(--blu-mid);"></div></div>
+          <span class="aliq-pct" style="color:var(--blu-mid);">15,0%</span>
+        </div>
+        <div class="aliq-row">
+          <span class="aliq-year">Anno 20</span>
+          <div class="aliq-track"><div class="aliq-fill" style="width:67%;background:var(--blu-light);"></div></div>
+          <span class="aliq-pct" style="color:var(--blu-light);">13,5%</span>
+        </div>
+        <div class="aliq-row">
+          <span class="aliq-year">Anno 25</span>
+          <div class="aliq-track"><div class="aliq-fill" style="width:53%;background:#5A9E6F;"></div></div>
+          <span class="aliq-pct" style="color:#3A8A55;">12,0%</span>
+        </div>
+        <div class="aliq-row">
+          <span class="aliq-year">Anno 30</span>
+          <div class="aliq-track"><div class="aliq-fill" style="width:40%;background:#2E9E5A;"></div></div>
+          <span class="aliq-pct" style="color:#2E9E5A;">10,5%</span>
+        </div>
+        <div class="aliq-row">
+          <span class="aliq-year">Anno 35+</span>
+          <div class="aliq-track"><div class="aliq-fill" style="width:23%;background:var(--verde);"></div></div>
+          <span class="aliq-pct" style="color:var(--verde);font-weight:700;">9,0% ✓</span>
+        </div>
+      </div>
+      <p style="font-size:8.5px;color:var(--text-soft);margin-top:1.5mm;font-style:italic;">Ogni anno di partecipazione oltre il 15° riduce l'aliquota dello 0,30%, fino al minimo del 9% (art. 11, D.Lgs. 252/2005).</p>
+    </div>
+
+    <!-- ANTICIPI -->
+    <div>
+      <p style="font-size:10.5px;font-weight:700;color:var(--blu);margin-bottom:2.5mm;">Il capitale non è bloccato: puoi richiedere anticipi.</p>
+      <div class="anticipo-grid">
+        <div class="ac">
+          <div class="ac-ico">🏥</div>
+          <h5>Spese mediche straordinarie</h5>
+          <span class="ac-pct">fino al 75%</span>
+          <p>Per gravi motivi di salute propri, del coniuge o dei figli. Tassazione agevolata, richiedibile in qualsiasi momento.</p>
+          <div class="ac-nota">Senza vincolo di anni di iscrizione</div>
+        </div>
+        <div class="ac">
+          <div class="ac-ico">🏠</div>
+          <h5>Prima casa o ristrutturazione</h5>
+          <span class="ac-pct">fino al 75%</span>
+          <p>Per acquisto, costruzione o ristrutturazione della prima casa — anche per i figli. Serve atto notarile o rogito.</p>
+          <div class="ac-nota">Dopo 8 anni di iscrizione</div>
+        </div>
+        <div class="ac">
+          <div class="ac-ico">🎯</div>
+          <h5>Esigenze personali</h5>
+          <span class="ac-pct">fino al 30%</span>
+          <p>Senza obbligo di motivazione specifica. Utile per master, viaggi importanti, spese straordinarie di qualsiasi tipo.</p>
+          <div class="ac-nota">Dopo 8 anni di iscrizione</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-dark">
+      <p><strong>Un esempio reale:</strong> Marco ha 45 anni e versa nel fondo da 10 anni. Ha accumulato 28.000€. Sua figlia vuole acquistare casa — Marco può richiedere un anticipo fino a 21.000€ (75%) per aiutarla, senza chiudere il fondo e continuando ad accumulare per la propria pensione.</p>
+    </div>
+
+    <div class="page-footer">
+      <span class="pf-brand">RF Assicurazioni · Palermo</span>
+      <span><span class="pf-dot"></span>A cura di Fabio Franco – Agente Generale</span>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════
+     PAGE 4 — CTA + CONTATTI + DATI LEGALI
+════════════════════════════════ -->
+<div class="page">
+  <div class="inner">
+
+    <div class="page-bar">
+      <div class="pb-brand"><div class="dot"></div><span>RF Assicurazioni · Fabio Franco – Agente Generale</span></div>
+      <span class="pn">04 / 04</span>
+    </div>
+
+    <!-- CTA HERO -->
+    <div class="cta-hero">
+      <span class="ct-tag">Consulenza gratuita e senza impegno</span>
+      <h2>Inizia oggi.<br>Ogni anno di attesa è risparmio<br>fiscale che non recuperi più.</h2>
+      <p>Calcoliamo insieme il tuo vantaggio fiscale reale, la proiezione della pensione integrativa e la soluzione più adatta al tuo reddito e alla tua situazione lavorativa.</p>
+      <a href="https://wa.me/390916255950" class="cta-btn">📲 Scrivici su WhatsApp →</a>
+      <a href="https://assicurazionipalermo.net/previdenza/" class="cta-btn-outline">Scopri la pagina Previdenza</a>
+    </div>
+
+    <!-- TRUST -->
+    <div class="trust-strip">
+      <div class="ti">
+        <div class="ti-ico">🛡️</div>
+        <h5>Oltre 30 anni di esperienza</h5>
+        <p>Storia costruita sulla fiducia dei clienti palermitani.</p>
+      </div>
+      <div class="ti">
+        <div class="ti-ico">🤝</div>
+        <h5>Consulenza personalizzata</h5>
+        <p>Analizziamo il tuo reddito reale e costruiamo la soluzione giusta per te.</p>
+      </div>
+      <div class="ti">
+        <div class="ti-ico">📍</div>
+        <h5>Sede a Palermo</h5>
+        <p>Piazza Unità D'Italia 15 — appuntamento in agenzia, telefono o videochiamata.</p>
+      </div>
+    </div>
+
+    <!-- CONTACTS -->
+    <div class="contact-grid">
+      <a href="https://wa.me/390916255950" class="ci">
+        <div class="ci-ico green">💬</div>
+        <div>
+          <div class="ci-label">WhatsApp</div>
+          <div class="ci-val">+39 091 6255950</div>
+        </div>
+      </a>
+      <a href="tel:+390916255950" class="ci">
+        <div class="ci-ico">📞</div>
+        <div>
+          <div class="ci-label">Telefono</div>
+          <div class="ci-val">091 6255950 · 091 6255951</div>
+        </div>
+      </a>
+      <a href="https://assicurazionipalermo.net/previdenza/" class="ci">
+        <div class="ci-ico orange">🌐</div>
+        <div>
+          <div class="ci-label">Pagina Previdenza</div>
+          <div class="ci-val">assicurazionipalermo.net/previdenza</div>
+        </div>
+      </a>
+      <a href="mailto:agenzia@assicurazionipalermo.net" class="ci">
+        <div class="ci-ico grey">✉️</div>
+        <div>
+          <div class="ci-label">Email</div>
+          <div class="ci-val">agenzia@assicurazionipalermo.net</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Orari -->
+    <div style="background:var(--cream);border:1.5px solid var(--border);border-radius:10px;padding:3.5mm 5mm;">
+      <p style="font-size:9px;font-weight:700;color:var(--blu);letter-spacing:1px;text-transform:uppercase;margin-bottom:1mm;">Orari · Piazza Unità D'Italia 15–15A–15B, 90144 Palermo</p>
+      <p style="font-size:10px;color:var(--text-soft);">Lun–Gio: 09:00–13:00 / 15:30–18:00 &nbsp;·&nbsp; Ven: 09:00–13:00 / Pomeriggio chiusi</p>
+    </div>
+
+    <!-- DATI LEGALI -->
+    <div class="legal-box">
+      <strong>RF Assicurazioni di Franco Fabio &amp; C. S.a.s.</strong> — P.IVA / C.F.: riportati negli atti societari<br>
+      Agenzia Generale Unipol · UniSalute · <strong>Codice Agenzia: 66031</strong> · RUI Società: <strong>A000813386</strong><br>
+      Responsabile attività di intermediazione: <strong>Dott. Fabio Franco</strong> · RUI Agente: <strong>A000511322</strong><br>
+      <strong>L'intermediario è soggetto al controllo dell'IVASS</strong> — Istituto per la Vigilanza sulle Assicurazioni.<br>
+      Registro Unico Intermediari: <a href="https://www.ivass.it/consumatori/strumenti/rui/" style="color:var(--blu);">www.ivass.it</a> · 
+      <a href="https://assicurazionipalermo.net/previdenza/" style="color:var(--arancio);font-weight:600;">assicurazionipalermo.net/previdenza</a>
+    </div>
+
+    <div class="page-footer">
+      <span class="pf-brand">RF Assicurazioni · Agenzia Generale Unipol · UniSalute · Palermo</span>
+      <span><span class="pf-dot"></span>Documento informativo. Non costituisce consulenza fiscale individuale.</span>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
